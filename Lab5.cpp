@@ -13,7 +13,7 @@ enum Kind {
 
 class Pet {
 public:
-    Pet() {
+    Pet() { 
 
     }
 
