@@ -26,7 +26,7 @@ Pet() {
 		this->petType = petType;
     }
 
-    ~Pet() {
+    ~Pet() { 
 
     }
 
