@@ -64,6 +64,7 @@ public:
 
 	bool isPolite() {
 		return greeting.find("Hello") != string::npos;
+		// ::npos is a constant static number with the highest possible value
 	}
 };
 
@@ -97,7 +98,8 @@ public:
 
 };
 
-void sort(vector<Pet> animals) {
+void selectionSort(vector<Pet> animals) {
+	// sorting from lowest to highest (by age)
 	int j, minIndex;
 	for (int i = 0; i < animals.size(); i++) {
 		minIndex = i;
@@ -133,9 +135,7 @@ void areFriends(vector<Pet> animals) {
 	}
 }
 
-int main()
-{
-	// (string name, string breed, int age, string greeting, int mass, Kind petType)
+int main() {
 
 	Pet animal1 = Pet("Chunk", "x", 3, "Hello", 8, dog);
 	Pet animal2 = Pet("Cloud", "y", 5, "Meow", 3, cat);
@@ -146,8 +146,11 @@ int main()
 	cout << animal3.getName() << animal3.isPolite() << endl;
 
 	vector<Pet> anim = { animal1, animal2, animal3 };
+	
+	// anim is the name of a dynamic array (vector) 
+	
 	printAnimals(anim);
-	sort(anim); 
+	selectionSort(anim); 
 	printAnimals(anim);
 
 	areFriends(anim);
