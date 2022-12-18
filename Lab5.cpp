@@ -4,99 +4,97 @@
 using namespace std;
 
 enum Kind {
-	cat,
-	dog,
-	bird,
-	hamster
+    cat,
+    dog,
+    bird,
+    hamster
 };
 
 
 class Pet {
 public:
-	Pet() {
+    Pet() {
 
-	}
+    }
 
-	Pet(string name, string breed, int age, string greeting, int mass, Kind petType) {
+    Pet(string name, string breed, int age, string greeting, int mass, Kind petType) {
 		this->name = name;
 		this->breed = breed;
 		this->age = age;
 		this->greeting = greeting;
 		this->mass = mass;
 		this->petType = petType;
-	}
+    }
 
-	~Pet() {
+    ~Pet() {
 
-	}
+    }
 
-	string getName() {
+    string getName() {
 		return name;
-	}
+    }
 
-	string getBreed() {
+    string getBreed() {
 		return breed;
-	}
+    }
 
-	int getAge() {
+    int getAge() {
 		return age;
-	}
+    }
 
-	string getGreeting() {
+    string getGreeting() {
 		return greeting;
-	}
+    }
 
-	int getMass() {
+    int getMass() {
 		return mass;
-	}
+    }
 
-	Kind getPetType() {
+    Kind getPetType() {
 		return petType;
-	}
+    }
 
-	bool isPolite() {
+    bool isPolite() {
 		return greeting.find("Hello") != string::npos;
 		// ::npos is a constant static number with the highest possible value
-	}
+    }
 
 private:
-	string name;
-	string breed;
-	int age;
-	string greeting;
-	int mass;
-	Kind petType;
-	
+    string name;
+    string breed;
+    int age;
+    string greeting;
+    int mass;
+    Kind petType;
 };
 
 
 class Home {
 public:
-	Home() {
+    Home() {
 
-	}
+    }
 
-	Home(string Name, vector<Pet> animals) {
-		this->Name = Name;
-		this->animals = animals;
-	}
+    Home(string Name, vector<Pet> animals) {
+	this->Name = Name;
+	this->animals = animals;
+    }
 
-	~Home() {
+    ~Home() {
 
-	}
+    }
 
-	string getName() {
-		return Name;
-	}
+    string getName() {
+	return Name;
+    }
 
-	vector<Pet> getAnimals() {
-		return animals;
-	}
+    vector<Pet> getAnimals() {
+	return animals;
+    }
 
 private:
 	string Name; 
 	vector<Pet> animals;
-
 };
 
 void selectionSort(vector<Pet> animals) {
@@ -147,9 +145,6 @@ int main() {
 	cout << animal3.getName() << animal3.isPolite() << endl;
 
 	vector<Pet> anim = { animal1, animal2, animal3 };
-	
-	// anim is the name of a dynamic array (vector) 
-	
 	printAnimals(anim);
 	selectionSort(anim); 
 	printAnimals(anim);
