@@ -80,7 +80,7 @@ public:
 	this->animals = animals;
     }
 
-    ~Home() {
+    ~Home() { 
 
     }
 
