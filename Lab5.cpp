@@ -100,6 +100,7 @@ private:
 };
 
 void selectionSort(vector<Pet> animals) {
+	// sorting from lowest to highest (by age)
 	int j, minIndex;
 	for (int i = 0; i < animals.size(); i++) {
 		minIndex = i;
