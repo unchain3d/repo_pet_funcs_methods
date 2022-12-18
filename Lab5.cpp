@@ -148,7 +148,7 @@ int main() {
 	
 	// anim is the name of a dynamic array (vector)
 	
-	printAnimals(anim);
+	printAnimals(anim); 
 	selectionSort(anim); 
 	printAnimals(anim);
 
