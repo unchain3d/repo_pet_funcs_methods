@@ -145,6 +145,9 @@ int main() {
 	cout << animal3.getName() << animal3.isPolite() << endl;
 
 	vector<Pet> anim = { animal1, animal2, animal3 };
+	
+	// anim is the name of a dynamic array (vector)
+	
 	printAnimals(anim);
 	selectionSort(anim); 
 	printAnimals(anim);
