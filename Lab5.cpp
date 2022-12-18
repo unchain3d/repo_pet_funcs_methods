@@ -12,14 +12,6 @@ enum Kind {
 
 
 class Pet {
-private:
-	string name;
-	string breed;
-	int age;
-	string greeting;
-	int mass;
-	Kind petType;
-
 public:
 	Pet() {
 
@@ -66,14 +58,19 @@ public:
 		return greeting.find("Hello") != string::npos;
 		// ::npos is a constant static number with the highest possible value
 	}
+
+private:
+	string name;
+	string breed;
+	int age;
+	string greeting;
+	int mass;
+	Kind petType;
+	
 };
 
 
 class Home {
-private:
-	string Name; 
-	vector<Pet> animals;
-
 public:
 	Home() {
 
@@ -95,6 +92,10 @@ public:
 	vector<Pet> getAnimals() {
 		return animals;
 	}
+
+private:
+	string Name; 
+	vector<Pet> animals;
 
 };
 
