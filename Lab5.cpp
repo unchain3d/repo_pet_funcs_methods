@@ -61,7 +61,7 @@ public:
 
 private:
     string name;
-    string breed;
+    string breed; 
     int age;
     string greeting;
     int mass;
